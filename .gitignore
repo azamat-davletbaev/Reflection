@@ -1,0 +1,8 @@
+﻿################################################################################
+# Данный GITIGNORE-файл был автоматически создан Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/ReflectionApp/.vs/ReflectionApp
+/ReflectionApp/ReflectionApp/bin/Debug/net8.0
+/ReflectionApp/ReflectionApp/obj
