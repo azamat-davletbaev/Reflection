@@ -1,15 +1,11 @@
 ﻿using ReflectionApp;
 
-Console.WriteLine("Reflection application");
+Console.WriteLine("Домашнее задание по рефлексии: Reflection application");
+Console.WriteLine("-----------------------------------------------------");
+var timer = new MyTimer();
 
-
-var f = new F();
-f = f.Get();
-
-var serializator = new Serializator();
-string s = serializator.Serialize(f);
-var ff = serializator.DeSerialize(s);
-
-
+Console.WriteLine($"Сериализация/десерилазация класса F кастомным методом {timer.Count} раз = {timer.GetSerializatorTime()} миллисекунд");
+Console.WriteLine($"Сериализация/десерилазация класса F методами Newtonsoft.Json 13.0.3 {timer.Count} раз = {timer.GetJsonSerilizeTime()} миллисекунд");
+Console.WriteLine("-----------------------------------------------------");
 
 Console.ReadLine();

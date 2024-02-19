@@ -1,19 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Formats.Tar;
-using System.Linq;
-using System.Numerics;
-using System.Reflection;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 
 namespace ReflectionApp
 {    
     /// <summary>
     /// кастомный сериализатор
     /// </summary>
-    internal class Serializator
+    internal static class Serializator
     {
         private const string separator = ";";
 
@@ -22,7 +14,7 @@ namespace ReflectionApp
         /// </summary>
         /// <param name="f"></param>
         /// <returns></returns>
-        public string Serialize(F f)
+        public static string Serialize(this F f)
         {            
             StringBuilder ss = new StringBuilder();
             
@@ -44,7 +36,7 @@ namespace ReflectionApp
         /// </summary>
         /// <param name="s"></param>
         /// <returns></returns>
-        public F DeSerialize(string s)
+        public static F DeSerializeF(this string s)
         {
             StringReader strReader = new StringReader(s);
 
